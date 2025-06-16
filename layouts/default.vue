@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col gap-2">
+  <div class="w-full flex flex-col">
     <BarNavbar />
     <slot />
   </div>

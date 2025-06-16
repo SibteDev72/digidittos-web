@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-primary2">
-        <p class="text-white">HomePage</p>
-    </div>
+   <div class="w-full flex flex-col">
+    <HeroSection />
+   </div>
 </template>
 
 <script setup lang="ts">
