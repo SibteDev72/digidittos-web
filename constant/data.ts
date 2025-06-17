@@ -13,7 +13,6 @@ export const menu = [
     },
     
 ]
-
 export const slides = [
     {
         id:1,
@@ -44,5 +43,49 @@ export const slides = [
         id:6,
         title: "Better digital products with Design System Services",
         desc: "A single source of truth guiding design decisions, for superior user experience and greater efficiency"
+    }
+]
+export const stats = [
+    {
+        id: 1,
+        figures: 5,
+        title: "service graphics"
+    },
+    {
+        id: 2,
+        figures: 30,
+        title: "fortunate 500 clients"
+    },
+    {
+        id: 3,
+        figures: 300,
+        title: "dedicated members"
+    },
+    {
+        id: 4,
+        figures: 8,
+        title: "years of journey"
+    }
+]
+export const flow = [
+    {
+        id: 1,
+        title: "idea",
+        desc: "Turn your idea from concept to MVP"
+    },
+    {
+        id: 2,
+        title: "design",
+        desc: "Sketch out the product to align the user needs"
+    },
+    {
+        id: 3,
+        title: "Develop",
+        desc: "Convert the designs into a live application"
+    },
+    {
+        id: 4,
+        title: "deploy",
+        desc: "Launching the application to the market"
     }
 ]

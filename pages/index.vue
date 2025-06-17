@@ -1,6 +1,7 @@
 <template>
    <div class="w-full flex flex-col">
     <HeroSection />
+    <ContentDetails />
    </div>
 </template>
 
