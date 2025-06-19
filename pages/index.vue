@@ -1,16 +1,13 @@
 <template>
-   <div class="w-full flex flex-col">
+  <div class="w-full flex flex-col">
     <HeroSection />
     <ContentDetails />
-   </div>
+    <ContentSevices />
+  </div>
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-    layout: 'default'
-})
+  layout: "default",
+});
 </script>
-
-<style scoped>
-
-</style>
