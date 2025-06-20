@@ -3,6 +3,7 @@
     <HeroSection />
     <ContentDetails />
     <ContentSevices />
+    <ContentReviews />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div
     id="container"
-    class="w-full h-[200vh] flex flex-col gap-12 items-center py-28"
+    class="w-full h-[130vh] flex flex-col gap-12 items-center py-24"
   >
     <div class="px-[30rem] flex flex-col gap-4">
       <p class="capitalize text-center text-dark font-bold text-5xl">
@@ -18,8 +18,9 @@
         id="service"
         v-for="item in serviceList"
         :key="item.id"
-        class="border-[1.5px] min-w-[460px] min-h-[15rem] border-primary2 flex flex-col gap-[4px] px-4 justify-center items-center rounded-md"
+        class="border-[1.5px] min-w-[460px] min-h-[15rem] border-primary2 flex flex-col gap-3 px-4 justify-center items-center rounded-md"
       >
+        <img class="w-8 h-auto" :src="`/icons/${item.icon}`" />
         <p class="text-2xl font-bold text-dark capitalize">{{ item.title }}</p>
         <p class="text-sm font-light text-dark text-center">{{ item.desc }}</p>
       </div>
@@ -28,26 +29,19 @@
 </template>
 
 <script setup lang="ts">
-const { $gsap, $scrollTrigger } = useNuxtApp();
+const { $gsap } = useNuxtApp();
 import { serviceList } from "~/constant/data";
 
 onMounted(() => {
-  $scrollTrigger.create({
-    trigger: "#container",
-    markers: false,
-    pin: "#container",
-    start: "top+=50% 100%",
-    end: "bottom 100%",
-  });
   $gsap.to("#service", {
-    x: -1500,
-    duration: 0.5,
+    x: -930,
     scrollTrigger: {
-      trigger: "#service",
-      markers: true,
-      start: "top+=128% 100%",
-      end: "bottom+=274% 100%",
+      trigger: "#container",
+      pin: true,
       scrub: 1,
+      start: "top top",
+      end: "bottom bottom",
+      markers: false,
     },
   });
 });

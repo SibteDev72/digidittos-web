@@ -92,26 +92,65 @@ export const serviceList = [
   {
     id: 1,
     title: "Product Validation Sprint",
+    icon: "group.png",
     desc: "A review of product creation essentials such as desirability, usability, feasibility, viability and product/market fit aimed at reducing the risk of bringing a product to the market",
   },
   {
     id: 2,
+    icon: "bulb.png",
     title: "Product design sprint",
     desc: "A five-day workshop to shape your product idea, answer crucial business questions, plan the essential features of your product and create initial implementation process.",
   },
   {
     id: 3,
+    icon: "eye.png",
     title: "UX review",
     desc: "An evaluation which will help you radically improve your product by eliminating all UX issues to get a truly appealing and streamlined experience that users will love.",
   },
   {
     id: 4,
+    icon: "research.png",
     title: "Research & development",
     desc: "A validation of your idea in just 6 weeks. Experiment with ideas and technologies to secure cutting-edge products and sustained development.",
   },
   {
     id: 5,
+    icon: "diamand.png",
     title: "User research",
     desc: "Digital excellence calls for dialogue. Improve the design, features, and success of your product by using actionable user insights.",
+  },
+];
+export const feedback = [
+  {
+    id: 1,
+    avatar: "jenny.jpg",
+    name: "Jenny Wilson",
+    role: "Vice President",
+    review:
+      "We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the product concept so quickly. It acted as a catalyst to take our design to the next level and get more eyes on our product.",
+  },
+  {
+    id: 2,
+    avatar: "hunzila.png",
+    name: "Hunzila Sameer",
+    role: "CEO",
+    review:
+      "We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the product concept so quickly.",
+  },
+  {
+    id: 3,
+    avatar: "huzaifa.png",
+    name: "Huzaifa Sameer",
+    role: "CTO",
+    review:
+      "Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the product concept so quickly. It acted as a catalyst to take our design to the next level and get more eyes on our product.",
+  },
+  {
+    id: 4,
+    avatar: "sibte.png",
+    name: "Sibte Muhammad",
+    role: "Web Developer",
+    review:
+      "We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. It acted as a catalyst to take our design to the next level and get more eyes on our product.",
   },
 ];
