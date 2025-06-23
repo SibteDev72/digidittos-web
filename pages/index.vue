@@ -1,9 +1,9 @@
 <template>
   <div class="w-full flex flex-col">
     <HeroSection />
-    <ContentDetails />
+    <!-- <ContentDetails />
     <ContentSevices />
-    <ContentReviews />
+    <ContentReviews /> -->
   </div>
 </template>
 
