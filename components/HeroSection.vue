@@ -1,14 +1,14 @@
 <template>
   <div class="w-full h-[calc(100vh-4rem)] flex flex-row">
     <div
-      class="w-full md:w-[50%] h-full bg-dark md:bg-[#FFFFFF] flex flex-col gap-8 md:gap-6 py-8 md:py-4 px-9 lg:px-14 xl:px-[10rem] justify-between md:justify-center"
+      class="w-full md:w-[50%] h-full bg-dark md:bg-white flex flex-col gap-8 md:gap-6 py-8 md:py-0 px-8 lg:px-14 xl:px-[10rem] justify-between md:justify-center"
     >
       <img
         id="image"
         class="flex md:hidden w-[100%]"
         src="/images/HeroSectionImage.png"
       />
-      <div class="w-full h-[50%] flex flex-col gap-4">
+      <div class="w-full h-[50%] md:h-fit flex flex-col gap-4">
         <p
           id="slideTitle"
           class="text-primary1 text-xl lg:text-3xl xl:text-5xl font-bold capitalize"

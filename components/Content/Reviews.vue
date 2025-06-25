@@ -1,21 +1,20 @@
 <template>
-  <div class="w-full h-[100vh] flex flex-row">
+  <div class="w-full h-[100vh] flex flex-col md:flex-row">
     <div
-      class="w-[50%] bg-[#2EC5CE] flex flex-col gap-4 justify-center items-center"
+      class="w-full md:w-[50%] h-[20%] md:h-full bg-[#2EC5CE] px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-2 md:gap-4 justify-center items-center"
     >
       <div class="w-fit">
-        <p class="text-dark text-5xl font-bold">Happy Customers</p>
+        <p class="text-dark text-2xl md:text-5xl font-bold">Happy Customers</p>
         <p class="text-dark text-xl font-light mt-4">
-          Feedback from these happy customers helps us <br />
-          in reaching the heights
+          Feedback from these happy customers helps us in reaching the heights
         </p>
       </div>
     </div>
     <div
-      class="w-[50%] relative flex flex-col gap-8 px-20 justify-between py-[15rem]"
+      class="w-full md:w-[50%] h-[80%] md:h-full relative flex flex-col gap-8 px-8 lg:px-14 xl:px-20 justify-between py-[7rem] lg:py-[15rem]"
     >
       <img
-        class="absolute top-12 right-12 w-[6rem] h-auto"
+        class="absolute top-12 right-12 w-[4rem] lg:w-[6rem] h-auto"
         src="/icons/commas.png"
       />
       <div id="review" class="flex flex-col gap-6">

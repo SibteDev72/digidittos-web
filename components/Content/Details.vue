@@ -1,18 +1,24 @@
 <template>
-  <div class="w-full h-[100vh] flex flex-col gap-12 justify-between pb-24">
+  <div class="w-full h-fit md:h-[100vh] flex flex-col">
     <div
-      class="w-full h-max py-12 px-12 bg-primary1 flex flex-col gap-10 justify-center items-center"
+      class="w-full h-[100vh] md:h-[50%] py-12 px-12 bg-primary1 flex flex-col gap-6 md:gap-10 justify-center items-center"
     >
-      <p class="text-4xl text-white font-extrabold">Some Count that matters</p>
-      <p class="text-xl text-white font-thin">
+      <p
+        class="text-2xl text-center md:text-3xl lg:text-4xl text-white font-extrabold"
+      >
+        Some Count that matters
+      </p>
+      <p class="text-xl text-white font-thin text-center">
         Our achievement in the journey depicted in numbers
       </p>
-      <div id="stats" class="flex flex-row">
+      <div id="stats" class="flex flex-col md:flex-row">
         <div
           v-for="item in stats"
           :key="item.id"
-          :class="`flex flex-col gap-2 items-center justify-center px-12 ${
-            item.id != stats.length ? 'border-r-[1.5px] border-white' : ''
+          :class="`flex flex-col gap-4 text-center py-4 md:py-0 items-center justify-center md:justify-start px-12 ${
+            item.id != stats.length
+              ? 'border-b-[1.5px] py-2 md:border-b-0 md:border-r-[1.5px] border-white'
+              : ''
           }`"
         >
           <p ref="statRefs" class="text-white text-4xl font-bold">0</p>
@@ -22,9 +28,18 @@
         </div>
       </div>
     </div>
-    <div id="flow" class="flex flex-col gap-8 w-full px-20">
-      <p class="text-dark text-3xl font-bold">The Process we follow</p>
-      <div class="flex flex-row w-full justify-between">
+    <div
+      id="flow"
+      class="flex flex-col h-[100vh] md:h-[50%] justify-center gap-8 w-full px-8 lg:px-14 xl:px-[10rem]"
+    >
+      <p
+        class="text-dark text-3xl font-bold capitalize text-center md:text-start"
+      >
+        The Process we follow
+      </p>
+      <div
+        class="flex flex-col md:flex-row w-full justify-center gap-4 md:gap-2 items-center md:items-start md:justify-between"
+      >
         <div
           id="flowDetails"
           v-for="item in flow"
@@ -33,9 +48,7 @@
         >
           <div class="flex flex-row items-center gap-2">
             <div class="w-4 h-4 rounded-full bg-[#2EC5CE]" />
-            <p class="font-light text-[#2EC5CE] text-sm">
-              ----------------------
-            </p>
+            <p class="font-light text-[#2EC5CE] text-sm">------------------</p>
           </div>
           <p class="text-xl text-dark capitalize font-semibold">
             {{ item.title }}
@@ -60,14 +73,15 @@ onMounted(async () => {
     const target = item.figures;
     $scrollTrigger.create({
       trigger: "#stats",
-      start: "top+=10% bottom",
-      markers: false,
+      start: "top bottom",
+      // markers: true,
       onEnter: () => {
         $gsap.fromTo(
           { val: 0 },
           { val: 0 },
           {
             val: target,
+            delay: 0.2,
             duration: 2,
             ease: "power1.out",
             onUpdate: function () {
