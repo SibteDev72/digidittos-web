@@ -154,3 +154,25 @@ export const feedback = [
       "We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. It acted as a catalyst to take our design to the next level and get more eyes on our product.",
   },
 ];
+export const webDevelopment = [
+  {
+    id: 1,
+    content: "Websites.",
+    desc: "A well-designed website is a powerful marketing and communication tool that helps build trust and generate leads.",
+  },
+  {
+    id: 2,
+    content: "Ecommerce.",
+    desc: "With eCommerce solutions, businesses can operate 24 hours a day, 7 days a week, and reach customers in any time zone.",
+  },
+  {
+    id: 3,
+    content: "Web Applications.",
+    desc: "Web applications can reach a global audience. They're interactive and engaging, so can easily hold users' attention.",
+  },
+  {
+    id: 4,
+    content: "Content Management System.",
+    desc: "A dedicated CMS designed to the specific needs of your business will save time and money by optimizing internal workflows.",
+  },
+];
