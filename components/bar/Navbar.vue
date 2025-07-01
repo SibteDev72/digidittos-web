@@ -8,13 +8,16 @@
             : 'bg-[#18191F] text-white lg:bg-[#FFFFFF] lg:text-dark'
         } flex flex-row gap-5 items-center justify-center duration-200`"
       >
-        <div class="flex flex-row gap-3 items-end">
-          <img class="w-auto h-7" src="/images/logo.png" />
-          <img class="w-auto h-5 mr-5" src="/images/Asset 2@4x 1.png" />
-        </div>
+        <NuxtLink to="/">
+          <div class="flex flex-row gap-3 items-end">
+            <img class="w-auto h-7" src="/images/logo.png" />
+            <img class="w-auto h-5 mr-5" src="/images/Asset 2@4x 1.png" />
+          </div>
+        </NuxtLink>
         <NuxtLink
+          :to="`/services/web development`"
           @mouseenter="onEnter(item.title)"
-          class="hidden lg:flex capitalize cursor-pointer font-semibold hhover:border-b-2 hover:border-primary2"
+          class="hidden lg:flex capitalize cursor-pointer font-semibold hover:border-b-2 hover:border-primary2"
           id="links"
           v-for="item in menu"
           :key="item.id"
@@ -60,9 +63,17 @@
       @mouseleave="subMenuStatus = false"
       v-if="subMenuStatus"
       id="submenu"
-      class="absolute left-0 top-[4rem] w-full h-52 z-50 bg-dark"
+      class="absolute p-8 left-0 top-[4rem] w-full h-52 z-50 bg-dark"
     >
-      <p class="text-white text-xl m-8 capitalize">{{ currentMenuTitle }}</p>
+      <div class="flex flex-row gap-8">
+        <NuxtLink
+          class="cursor-pointer capitalize text-white text-lg font-semibold hover:border-b-2 hover:border-primary1"
+          v-for="item in currentSubMenu"
+          :to="`/services/${item.name}`"
+          :key="item.id"
+          >{{ item.name }}</NuxtLink
+        >
+      </div>
     </div>
   </div>
   <!-- Mobile Navbar -->
@@ -89,6 +100,7 @@ const { $gsap } = useNuxtApp();
 const subMenuStatus = ref<boolean>(false);
 const mobileMenuStatus = ref<boolean>(false);
 const currentMenuTitle = ref<string>("");
+const currentSubMenu = ref<any>([]);
 
 function handleButton(name: string) {
   alert(name);
@@ -115,14 +127,16 @@ function handleMobileMenu() {
 function onEnter(title: string) {
   currentMenuTitle.value = title;
   subMenuStatus.value = true;
+  const menuItem: any = menu.find((item) => item.title === title);
+  currentSubMenu.value = menuItem?.subMenu || [];
   $gsap.fromTo(
     "#submenu",
     { opacity: 0, y: -20 },
     {
-      delay: 0.2,
       opacity: 1,
       y: 0,
       duration: 0.2,
+      delay: 0.2,
       ease: "power2.out",
     }
   );

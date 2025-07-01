@@ -2,14 +2,20 @@ export const menu = [
   {
     id: 1,
     title: "services",
+    subMenu: [
+      { id: 1, name: "web development" },
+      { id: 1, name: "mobile app development" },
+    ],
   },
   {
     id: 2,
-    title: "industries",
+    title: "about us",
+    subMenu: [],
   },
   {
     id: 3,
-    title: "about us",
+    title: "contact us",
+    subMenu: [],
   },
 ];
 export const slides = [
@@ -154,25 +160,206 @@ export const feedback = [
       "We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. It acted as a catalyst to take our design to the next level and get more eyes on our product.",
   },
 ];
-export const webDevelopment = [
+export const services = [
   {
     id: 1,
-    content: "Websites.",
-    desc: "A well-designed website is a powerful marketing and communication tool that helps build trust and generate leads.",
+    title: "web development",
+    introduction: {
+      heading: "What are web development services?",
+      subHeading:
+        "Web development encompasses a wide range of services, which include delivering websites or web apps, cybersecurity solutions, UX/UI design, eCommerce solutions, website architectures, QA testing, maintenance, consulting, and even a custom CMS.",
+      keyPoints: {
+        heading: "Achieve your business goals with web development solutions",
+        subHeading:
+          "Our battle-tested developers specialize in a wide range of web development services. Here are some of the solutions that we can deliver for you.",
+        points: [
+          {
+            id: 1,
+            content: "Websites.",
+            desc: "A well-designed website is a powerful marketing and communication tool that helps build trust and generate leads.",
+          },
+          {
+            id: 2,
+            content: "Ecommerce.",
+            desc: "With eCommerce solutions, businesses can operate 24 hours a day, 7 days a week, and reach customers in any time zone.",
+          },
+          {
+            id: 3,
+            content: "Web Applications.",
+            desc: "Web applications can reach a global audience. They're interactive and engaging, so can easily hold users' attention.",
+          },
+          {
+            id: 4,
+            content: "Content Management System.",
+            desc: "A dedicated CMS designed to the specific needs of your business will save time and money by optimizing internal workflows.",
+          },
+        ],
+      },
+    },
+    technologies: {
+      heading: "Which technologies will bring maximum value to your business?",
+      subHeading:
+        "Solve customer problems by choosing cutting-edge technologies for your tech stack. Take your business to the next level with the right solutions tailored to your own requirements.",
+      points: [
+        {
+          id: 1,
+          content: "Frontend Development",
+          desc: "We use the most popular frontend frameworks like React.js, Vue.js, and Angular that enable us to create the surface layer of your product.",
+        },
+        {
+          id: 2,
+          content: "Backend Development",
+          desc: "We use server-side technologies like Python, Ruby on Rails, and Node.js for prototyping and development, producing fast and scalable web apps.",
+        },
+        {
+          id: 3,
+          content: "Full Stack Development",
+          desc: "We deliver end-to-end web development, combining frontend and backend solutions and other technologies necessary to make your product a success.",
+        },
+        {
+          id: 4,
+          content: "Low-Code Development",
+          desc: "We also specialize in building no-code and low-code web solutions that allow clients to save time and money. We use platforms like Webflow or Mendix.",
+        },
+        {
+          id: 5,
+          content: "Cloud Development",
+          desc: "Furthermore, we use cloud services like Google Cloud, Amazon Web Services, and Microsoft Azure for fast and secure application deployment.",
+        },
+      ],
+    },
+    advantages: {
+      heading:
+        "Take advantage of our proven web development process and make your project a success",
+      subheading:
+        "We recognize that the most complex projects demand that our web development team pay attention to every detail in the process of creating web-based solutions. At Netguru, we’ve delivered over 1000 projects, so we know what it takes to execute a seamless and optimized web-based software development process.",
+      points: [
+        {
+          id: 1,
+          content: "Requirement Analysis & Planning",
+          desc: "We start by gathering your business goals, defining the project scope, and identifying technical requirements to ensure a solid foundation.",
+        },
+        {
+          id: 2,
+          content: "UI/UX Design",
+          desc: "Our design team crafts intuitive and responsive interfaces that provide a smooth and engaging user experience across devices.",
+        },
+        {
+          id: 3,
+          content: "Agile Development Process",
+          desc: "We follow agile methodology for iterative delivery, enabling rapid feature rollout, continuous feedback, and reduced time-to-market.",
+        },
+        {
+          id: 4,
+          content: "Quality Assurance & Testing",
+          desc: "We run extensive functional, performance, and security testing to ensure your product runs flawlessly in real-world scenarios.",
+        },
+        {
+          id: 5,
+          content: "Maintenance & Optimization",
+          desc: "Post-launch, we offer maintenance, performance tuning, SEO optimization, and feature enhancements to keep your web product competitive.",
+        },
+      ],
+    },
   },
   {
     id: 2,
-    content: "Ecommerce.",
-    desc: "With eCommerce solutions, businesses can operate 24 hours a day, 7 days a week, and reach customers in any time zone.",
-  },
-  {
-    id: 3,
-    content: "Web Applications.",
-    desc: "Web applications can reach a global audience. They're interactive and engaging, so can easily hold users' attention.",
-  },
-  {
-    id: 4,
-    content: "Content Management System.",
-    desc: "A dedicated CMS designed to the specific needs of your business will save time and money by optimizing internal workflows.",
+    title: "mobile app development",
+    introduction: {
+      heading: "What are mobile app development services?",
+      subHeading:
+        "Mobile app development involves creating software applications that run on mobile devices. It includes building native, hybrid, or cross-platform apps with a focus on performance, user experience, and platform-specific features.",
+      keyPoints: {
+        heading: "Accelerate your growth with mobile app solutions",
+        subHeading:
+          "Our experienced mobile developers deliver high-quality applications tailored to your goals. Below are some of the mobile solutions we can create for you.",
+        points: [
+          {
+            id: 1,
+            content: "Native Apps.",
+            desc: "Built specifically for iOS or Android, native apps provide the best performance and take full advantage of platform-specific features.",
+          },
+          {
+            id: 2,
+            content: "Cross-Platform Apps.",
+            desc: "Developed using technologies like Flutter or React Native, cross-platform apps run seamlessly on both iOS and Android from a single codebase.",
+          },
+          {
+            id: 3,
+            content: "Progressive Web Apps (PWAs).",
+            desc: "PWAs offer mobile-app-like experiences in the browser with the ability to work offline, send notifications, and be installed on the home screen.",
+          },
+          {
+            id: 4,
+            content: "Enterprise Mobile Apps.",
+            desc: "Tailored for internal use, these apps enhance productivity and streamline operations for employees, partners, or stakeholders.",
+          },
+        ],
+      },
+    },
+    technologies: {
+      heading: "What technologies drive mobile app success?",
+      subHeading:
+        "Choose the right technologies to ensure your mobile app is scalable, fast, and user-friendly. We align the tech stack with your vision and product needs.",
+      points: [
+        {
+          id: 1,
+          content: "iOS Development",
+          desc: "Using Swift and Objective-C, we build secure and performant apps for the Apple ecosystem, including iPhone, iPad, and Apple Watch.",
+        },
+        {
+          id: 2,
+          content: "Android Development",
+          desc: "We develop Android apps using Kotlin and Java, ensuring high compatibility across a wide range of Android devices.",
+        },
+        {
+          id: 3,
+          content: "Cross-Platform Development",
+          desc: "Using frameworks like React Native and Flutter, we build cost-effective mobile apps that run smoothly on both platforms.",
+        },
+        {
+          id: 4,
+          content: "Backend for Mobile",
+          desc: "We build scalable and secure backends using Node.js, Firebase, or GraphQL to power your mobile app’s data and authentication needs.",
+        },
+        {
+          id: 5,
+          content: "Mobile DevOps",
+          desc: "Implementing CI/CD pipelines and app store deployment using tools like Fastlane and Bitrise to ensure smooth updates and release cycles.",
+        },
+      ],
+    },
+    advantages: {
+      heading: "Benefit from our end-to-end mobile app development process",
+      subheading:
+        "From ideation to deployment, our mobile app development process is focused on delivering user-centered, reliable, and scalable solutions that meet your business needs. With dozens of successful apps launched, we know how to build and ship impactful products.",
+      points: [
+        {
+          id: 1,
+          content: "Validate your app idea",
+          desc: "We begin by understanding your vision, researching the market, and ensuring your idea aligns with user needs and technical feasibility.",
+        },
+        {
+          id: 2,
+          content: "Design user-friendly UI/UX",
+          desc: "Our design team crafts intuitive and visually appealing interfaces tailored to your brand and optimized for engagement.",
+        },
+        {
+          id: 3,
+          content: "Develop robust features",
+          desc: "Using modern frameworks and languages, we code the app functionalities with a focus on speed, stability, and responsiveness.",
+        },
+        {
+          id: 4,
+          content: "Test rigorously",
+          desc: "Each release goes through manual and automated testing to ensure bug-free, secure, and smooth performance on all target devices.",
+        },
+        {
+          id: 5,
+          content: "Launch & support",
+          desc: "We handle app store submission and provide post-launch support, including updates, monitoring, and performance improvements.",
+        },
+      ],
+    },
   },
 ];
