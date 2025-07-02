@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full flex flex-col overflow-x-hidden">
+  <div class="w-full flex flex-col">
     <BarNavbar />
-    <HeroSection />
+    <HeroSection v-if="showHeroSection" />
     <slot />
     <Footer />
   </div>
@@ -9,8 +9,8 @@
 
 <script setup lang="ts">
 const route = useRoute();
-// const showNavFooter = computed(() => {
-//   const path = route.path;
-//   return path === "/success";
-// });
+const showHeroSection = computed(() => {
+  const path = route.path;
+  return path !== "/services";
+});
 </script>

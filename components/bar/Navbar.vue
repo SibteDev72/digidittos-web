@@ -1,11 +1,13 @@
 <template>
-  <div class="flex flex-col">
+  <div class="z-[2000] flex flex-col">
     <div class="w-full h-[4rem] flex flex-row">
       <div
         :class="`w-[50%] px-3 md:px-0 h-full ${
-          subMenuStatus === true
+          subMenuStatus
             ? 'bg-[#18191F] text-white'
-            : 'bg-[#18191F] text-white lg:bg-[#FFFFFF] lg:text-dark'
+            : transparency
+            ? 'bg-transparent text-white'
+            : 'bg-[#18191F] lg:bg-white text-white lg:text-dark'
         } flex flex-row gap-5 items-center justify-center duration-200`"
       >
         <NuxtLink to="/">
@@ -15,7 +17,7 @@
           </div>
         </NuxtLink>
         <NuxtLink
-          :to="`/services/web development`"
+          :to="item.link"
           @mouseenter="onEnter(item.title)"
           class="hidden lg:flex capitalize cursor-pointer font-semibold hover:border-b-2 hover:border-primary2"
           id="links"
@@ -25,7 +27,9 @@
         >
       </div>
       <div
-        class="w-[50%] h-full bg-[#18191F] flex flex-col justify-center items-end px-3 md:px-0 md:items-center"
+        :class="`w-[50%] h-full flex flex-col justify-center items-end px-3 md:px-0 md:items-center ${
+          transparency ? 'bg-transparent' : 'bg-[#18191F]'
+        }`"
       >
         <div
           @click="handleMobileMenu"
@@ -78,7 +82,7 @@
   </div>
   <!-- Mobile Navbar -->
   <div
-    :class="`lg:hidden fixed top-0 right-0 h-screen w-[60vw] bg-dark z-[1000] flex flex-col justify-start pl-4 pt-[10rem] gap-6 transition-transform duration-300 ease-in-out ${
+    :class="`lg:hidden fixed top-0 right-0 h-screen w-[60vw] z-[1000] flex flex-col justify-start pl-4 pt-[10rem] gap-6 transition-transform duration-300 ease-in-out ${
       mobileMenuStatus ? 'translate-x-0' : 'translate-x-full'
     }`"
   >
@@ -86,9 +90,21 @@
       id="mobileMenu"
       v-for="item in menu"
       :key="item.id"
+      :to="item.link"
       class="text-lg text-white capitalize"
     >
-      {{ item.title }}
+      <div class="flex flex-col gap-2">
+        {{ item.title }}
+        <div class="flex flex-col gap-2">
+          <NuxtLink
+            :to="`${item.link}/${subMenu.name}`"
+            class="ml-2 text-sm text-white capitalize"
+            v-for="subMenu in item.subMenu"
+          >
+            {{ subMenu.name }}
+          </NuxtLink>
+        </div>
+      </div>
     </NuxtLink>
   </div>
 </template>
@@ -101,6 +117,12 @@ const subMenuStatus = ref<boolean>(false);
 const mobileMenuStatus = ref<boolean>(false);
 const currentMenuTitle = ref<string>("");
 const currentSubMenu = ref<any>([]);
+const route = useRoute();
+
+const transparency = computed(() => {
+  const path = route.path;
+  return path === "/services";
+});
 
 function handleButton(name: string) {
   alert(name);

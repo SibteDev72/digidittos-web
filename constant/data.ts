@@ -2,19 +2,23 @@ export const menu = [
   {
     id: 1,
     title: "services",
+    link: "/services",
     subMenu: [
       { id: 1, name: "web development" },
-      { id: 1, name: "mobile app development" },
+      { id: 2, name: "mobile app development" },
+      { id: 3, name: "UI_UX Design" },
     ],
   },
   {
     id: 2,
     title: "about us",
+    link: "/about",
     subMenu: [],
   },
   {
     id: 3,
     title: "contact us",
+    link: "/contact",
     subMenu: [],
   },
 ];
@@ -358,6 +362,100 @@ export const services = [
           id: 5,
           content: "Launch & support",
           desc: "We handle app store submission and provide post-launch support, including updates, monitoring, and performance improvements.",
+        },
+      ],
+    },
+  },
+  {
+    id: 3,
+    title: "UI_UX Design",
+    introduction: {
+      heading: "Empowering Brands with Intuitive UI/UX Experiences",
+      subHeading:
+        "We craft user-centric designs that balance aesthetics, functionality, and seamless interaction across all platforms.",
+      keyPoints: {
+        heading: "What Sets Our UI/UX Services Apart?",
+        subHeading:
+          "User-first design strategies tailored for conversion and engagement.",
+        points: [
+          {
+            id: 1,
+            content: "User Research",
+            desc: "In-depth research to understand user behavior, goals, and expectations.",
+          },
+          {
+            id: 2,
+            content: "Wireframes & Prototypes",
+            desc: "Rapid wireframes and interactive prototypes to visualize user journeys.",
+          },
+          {
+            id: 3,
+            content: "Design Systems",
+            desc: "Consistent, scalable components for cohesive design across screens.",
+          },
+          {
+            id: 4,
+            content: "Mobile-First Thinking",
+            desc: "We prioritize responsive and adaptive design across all devices.",
+          },
+        ],
+      },
+    },
+    technologies: {
+      heading: "Tools & Platforms We Use",
+      subHeading:
+        "From prototyping to high-fidelity design, we use industry-standard tools that ensure quality and precision.",
+      points: [
+        {
+          id: 1,
+          content: "Figma",
+          desc: "Collaborative design, prototyping, and feedback in real-time.",
+        },
+        {
+          id: 2,
+          content: "Adobe XD",
+          desc: "UI design and interaction prototyping with seamless integration.",
+        },
+        {
+          id: 3,
+          content: "Sketch",
+          desc: "Vector-based UI design tool for Mac with extensive plugin support.",
+        },
+        {
+          id: 4,
+          content: "InVision",
+          desc: "Interactive mockups and design collaboration for teams.",
+        },
+        {
+          id: 5,
+          content: "Zeplin",
+          desc: "Hand-off ready assets and style guides for developers.",
+        },
+      ],
+    },
+    advantages: {
+      heading: "Why Choose Our UI/UX Team?",
+      subheading: "We focus on usability, aesthetics, and outcomes.",
+      points: [
+        {
+          id: 1,
+          content: "Conversion-Focused",
+          desc: "We design experiences that drive clicks, conversions, and retention.",
+        },
+        {
+          id: 2,
+          content: "Tailored for Your Audience",
+          desc: "Designs tailored to specific industries and user personas.",
+        },
+        {
+          id: 3,
+          content: "Design-to-Development Sync",
+          desc: "Seamless communication between designers and developers for pixel-perfect output.",
+        },
+        {
+          id: 4,
+          content: "Cross-Platform Design",
+          desc: "We ensure consistency across mobile, tablet, and desktop interfaces.",
         },
       ],
     },
