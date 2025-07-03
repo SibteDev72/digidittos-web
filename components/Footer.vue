@@ -20,7 +20,8 @@
         <p class="text-lg lg:text-2xl font-semibold text-white">Menu</p>
         <div class="grid grid-cols-2 gap-3 w-max">
           <NuxtLink
-            class="capitalize cursor-pointer font-medium text-xl lg:text-2xl text-white hover:border-b-2 hover:border-primary2"
+            :to="item.link"
+            class="capitalize cursor-pointer font-medium text-lg text-white hover:border-b-2 hover:border-primary2"
             v-for="item in menu"
             :key="item.id"
             >{{ item.title }}</NuxtLink

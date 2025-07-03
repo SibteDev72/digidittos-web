@@ -6,7 +6,7 @@ export const menu = [
     subMenu: [
       { id: 1, name: "web development" },
       { id: 2, name: "mobile app development" },
-      { id: 3, name: "UI_UX Design" },
+      { id: 3, name: "UI UX Design" },
     ],
   },
   {
@@ -368,7 +368,7 @@ export const services = [
   },
   {
     id: 3,
-    title: "UI_UX Design",
+    title: "UI UX Design",
     introduction: {
       heading: "Empowering Brands with Intuitive UI/UX Experiences",
       subHeading:

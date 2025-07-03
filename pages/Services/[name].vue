@@ -13,7 +13,7 @@
       </div>
       <div
         id="container1SM"
-        class="bg-[#F2F5F7] px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center w-full h-max py-[4rem] md:py-0 md:h-[70%]"
+        class="bg-[#F2F5F7] px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center w-full min-h-[70vh] py-[4rem] md:py-0 md:h-[70%]"
       >
         <p class="text-dark text-3xl font-bold text-center">
           {{ currentService.introduction.keyPoints.heading }}
@@ -26,10 +26,12 @@
             v-for="item in currentService.introduction.keyPoints.points"
             :key="item.id"
             :style="`margin-top: calc(8px * ${item.id})`"
-            class="service-card w-full px-4 flex flex-col justify-center gap-2 h-[14rem] bg-white"
+            class="service-card bg-white rounded-md shadow-md w-full px-6 flex flex-col justify-center gap-2 py-4 min-h-[18rem] md:min-h-[14rem]"
           >
-            <p class="text-sm font-bold text-dark">{{ item.content }}</p>
-            <p class="text-xs text-dark">{{ item.desc }}</p>
+            <p class="text-lg font-bold text-dark capitalize">
+              {{ item.content }}
+            </p>
+            <p class="text-sm text-dark">{{ item.desc }}</p>
           </div>
         </div>
       </div>
@@ -47,7 +49,7 @@
       </div>
       <div
         id="container2SM"
-        class="bg-[#F2F5F7] w-full flex flex-col justify-center h-max px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
+        class="bg-[#F2F5F7] w-full min-h-[70vh] flex flex-col justify-center px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
       >
         <div
           class="grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4"
@@ -56,10 +58,12 @@
             v-for="item in currentService.technologies.points"
             :key="item.id"
             :style="`margin-top: calc(8px * ${item.id})`"
-            class="service-card bg-white w-full px-4 flex flex-col gap-2 justify-center h-[18rem] md:h-[14rem]"
+            class="service-card bg-white rounded-md shadow-md w-full px-4 flex flex-col gap-2 justify-center py-4 min-h-[18rem] md:min-h-[14rem]"
           >
-            <p class="text-sm font-bold text-dark">{{ item.content }}</p>
-            <p class="text-xs text-dark">{{ item.desc }}</p>
+            <p class="text-lg font-bold text-dark capitalize">
+              {{ item.content }}
+            </p>
+            <p class="text-sm text-dark">{{ item.desc }}</p>
           </div>
         </div>
       </div>
@@ -77,7 +81,7 @@
       </div>
       <div
         id="container3SM"
-        class="bg-[#F2F5F7] w-full flex flex-col justify-center h-max px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
+        class="bg-[#F2F5F7] w-full min-h-[70vh] flex flex-col justify-center px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
       >
         <div
           class="grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4"
@@ -86,10 +90,15 @@
             v-for="item in currentService.advantages.points"
             :key="item.id"
             :style="`margin-top: calc(8px * ${item.id})`"
-            class="service-card bg-white w-full px-4 flex flex-col gap-2 justify-center h-[18rem] md:h-[14rem]"
+            class="service-card bg-white rounded-md shadow-md w-full px-4 flex flex-col gap-2 justify-center py-4 min-h-[18rem] md:min-h-[14rem]"
           >
-            <p class="text-sm font-bold text-dark">{{ item.content }}</p>
-            <p class="text-xs text-dark">{{ item.desc }}</p>
+            <p class="text-3xl md:text-4xl text-dark font-bold">
+              0{{ item.id }}.
+            </p>
+            <p class="text-lg font-bold text-dark capitalize">
+              {{ item.content }}
+            </p>
+            <p class="text-sm text-dark">{{ item.desc }}</p>
           </div>
         </div>
       </div>
@@ -116,28 +125,6 @@ const isServiceValid = computed(() => {
   );
 });
 
-watch(isServiceValid, (isValid) => {
-  if (!isValid) return;
-
-  nextTick(() => {
-    const mm = $gsap.matchMedia();
-
-    mm.add("(max-width: 767px)", () => {
-      buildTimeline("#container1SM");
-      buildTimeline("#container2SM");
-      buildTimeline("#container3SM");
-    });
-
-    mm.add("(min-width: 768px)", () => {
-      buildTimeline("#container1LG");
-      buildTimeline("#container2LG");
-      buildTimeline("#container3LG");
-    });
-
-    onBeforeUnmount(() => mm.revert());
-  });
-});
-
 function buildTimeline(containerSel: string) {
   const container = document.querySelector(containerSel);
   if (!container) return;
@@ -149,7 +136,7 @@ function buildTimeline(containerSel: string) {
     defaults: { ease: "none" },
     scrollTrigger: {
       trigger: container,
-      start: "top top",
+      start: "top-=15% top",
       end: "bottom+=20% bottom",
       scrub: 1,
       // markers: true,
@@ -157,13 +144,32 @@ function buildTimeline(containerSel: string) {
   });
 
   cards.forEach((card, i) => {
-    tl.to(card, { marginTop: 0, duration: 0.2 }, i * 0.15);
+    tl.to(card, { marginTop: 0, duration: 0.2 }, i * 0.25);
   });
 }
 
-onMounted(() => {
+onMounted(async () => {
   currentService.value =
     services.find((item) => item.title === serviceTitle.value) || null;
-  if (!currentService.value) return;
+
+  await nextTick();
+
+  if (!isServiceValid.value) return;
+
+  const mm = $gsap.matchMedia();
+
+  mm.add("(max-width: 767px)", () => {
+    buildTimeline("#container1SM");
+    buildTimeline("#container2SM");
+    buildTimeline("#container3SM");
+  });
+
+  mm.add("(min-width: 768px)", () => {
+    buildTimeline("#container1LG");
+    buildTimeline("#container2LG");
+    buildTimeline("#container3LG");
+  });
+
+  onBeforeUnmount(() => mm.revert());
 });
 </script>

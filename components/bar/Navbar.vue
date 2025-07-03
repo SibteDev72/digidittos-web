@@ -82,13 +82,14 @@
   </div>
   <!-- Mobile Navbar -->
   <div
-    :class="`lg:hidden fixed top-0 right-0 h-screen w-[60vw] z-[1000] flex flex-col justify-start pl-4 pt-[10rem] gap-6 transition-transform duration-300 ease-in-out ${
+    :class="`lg:hidden fixed top-0 right-0 bg-dark h-screen w-[60vw] z-[1000] flex flex-col justify-start pl-4 pt-[10rem] gap-6 transition-transform duration-300 ease-in-out ${
       mobileMenuStatus ? 'translate-x-0' : 'translate-x-full'
     }`"
   >
     <NuxtLink
       id="mobileMenu"
       v-for="item in menu"
+      @click="mobileMenuStatus = false"
       :key="item.id"
       :to="item.link"
       class="text-lg text-white capitalize"
@@ -100,6 +101,7 @@
             :to="`${item.link}/${subMenu.name}`"
             class="ml-2 text-sm text-white capitalize"
             v-for="subMenu in item.subMenu"
+            @click="mobileMenuStatus = false"
           >
             {{ subMenu.name }}
           </NuxtLink>
