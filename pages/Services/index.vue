@@ -12,24 +12,29 @@
         Design. Development. Consulting. 5 years and counting.
       </p>
     </div>
-    <div class="w-full bg-white flex flex-col z-50 -mt-[2rem] rounded-t-[2rem]">
+    <div class="w-full flex flex-col z-10 -mt-[2rem]">
       <div
-        class="w-full shadow-lg sticky top-0 h-[calc(5vh+2rem)] flex flex-row justify-evenly items-center"
+        class="w-full overflow-x-scroll z-20 bg-white shadow-lg sticky top-0 h-[calc(5vh+2rem)] flex flex-row gap-12 px-8 lg:px-14 xl:px-[10rem] items-center md:justify-center"
       >
         <NuxtLink
-          :to="`/services/${item.name}`"
-          v-for="item in menu[0].subMenu"
-          class="text-animate text-dark text-sm lg:text-lg capitalize font-semibold"
+          :to="{ path: '/services', hash: item.hash }"
+          v-for="item in serviceNav"
+          class="min-w-max text-animate mt-4 text-dark text-lg capitalize font-semibold"
           >{{ item.name }}</NuxtLink
         >
       </div>
-      <div class="w-full h-[100vh]"></div>
+      <ContentIdeation />
+      <ContentServicesList
+        v-for="item in servicesList"
+        :key="item.id"
+        :data="item"
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { menu } from "~/constant/data";
+import { serviceNav, servicesList } from "~/constant/data";
 
 const { $gsap, $scrollTrigger } = useNuxtApp();
 onMounted(() => {
@@ -48,7 +53,7 @@ onMounted(() => {
   $scrollTrigger.create({
     trigger: "#cover-container",
     start: "top top",
-    end: "top+=40% start",
+    end: "top+=30% start",
     pin: true,
     // markers: true,
   });

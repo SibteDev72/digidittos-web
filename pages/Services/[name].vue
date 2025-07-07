@@ -13,7 +13,7 @@
       </div>
       <div
         id="container1SM"
-        class="bg-[#F2F5F7] px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center w-full min-h-[70vh] py-[4rem] md:py-0 md:h-[70%]"
+        class="bg-body px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center w-full min-h-[70vh] py-[4rem] md:py-0 md:h-[70%]"
       >
         <p class="text-dark text-3xl font-bold text-center">
           {{ currentService.introduction.keyPoints.heading }}
@@ -49,7 +49,7 @@
       </div>
       <div
         id="container2SM"
-        class="bg-[#F2F5F7] w-full min-h-[70vh] flex flex-col justify-center px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
+        class="bg-body w-full min-h-[70vh] flex flex-col justify-center px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
       >
         <div
           class="grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4"
@@ -81,7 +81,7 @@
       </div>
       <div
         id="container3SM"
-        class="bg-[#F2F5F7] w-full min-h-[70vh] flex flex-col justify-center px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
+        class="bg-body w-full min-h-[70vh] flex flex-col justify-center px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
       >
         <div
           class="grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4"
@@ -139,7 +139,7 @@ function buildTimeline(containerSel: string) {
       start: "top-=15% top",
       end: "bottom+=20% bottom",
       scrub: 1,
-      // markers: true,
+      markers: false,
     },
   });
 

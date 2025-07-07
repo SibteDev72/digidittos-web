@@ -22,6 +22,13 @@ export const menu = [
     subMenu: [],
   },
 ];
+export const serviceNav = [
+  { id: 1, name: "ideation", hash: "#ideation" },
+  { id: 2, name: "product design", hash: "#productDesign" },
+  { id: 3, name: "web development", hash: "#webDev" },
+  { id: 4, name: "app development", hash: "#mobileDev" },
+  { id: 5, name: "support", hash: "#support" },
+];
 export const slides = [
   {
     id: 1,
@@ -459,5 +466,164 @@ export const services = [
         },
       ],
     },
+  },
+];
+export const servicesList = [
+  {
+    id: 1,
+    hash: "productDesign",
+    title: "Product design",
+    desc: "Craft delightful user experiences that stand out. Solve real problems and improve your vital business metrics through beautiful interfaces.",
+    points: [
+      {
+        id: 1,
+        title: "User experience design",
+        desc: "Humanize your software user experience and provide additional value to your customers and your business.",
+      },
+      {
+        id: 2,
+        title: "User interface design",
+        desc: "Turn potential visitors to customers by delivering responsive and accessible user interface designs for your product.",
+      },
+      {
+        id: 3,
+        title: "Branding",
+        desc: "Build a strong brand, shape how consumers perceive your company, drive new business, and build trust with consumers.",
+      },
+      {
+        id: 4,
+        title: "Illustrations",
+        desc: "Establish a unique and unmistakable visual language of your brand and product through custom-built illustrations.",
+      },
+      {
+        id: 5,
+        title: "UX writing",
+        desc: "Establish a competitive advantage with frictionless copy that nudges users to take action.",
+      },
+      {
+        id: 6,
+        title: "Design systems",
+        desc: "Consistency matters. Create better digital products more efficiently with design systems.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    hash: "webDev",
+    title: "Web development services",
+    desc: "Leverage reliable processes and speed up delivery across technology stacks. How can we help you?",
+    points: [
+      {
+        id: 1,
+        title: "Ruby on Rails",
+        desc: "Make use of the perfect solution when the speed of development is crucial to your success.",
+      },
+      {
+        id: 2,
+        title: "Node. js",
+        desc: "Build performant web applications based on Javascript – one language for full-stack development.",
+      },
+      {
+        id: 3,
+        title: "Python",
+        desc: "Python is currently one of the fastest growing languages to get your job done on time.",
+      },
+      {
+        id: 4,
+        title: "Django",
+        desc: "Make the most of a free, open-source, Python-based framework used by the world's tech giants.",
+      },
+      {
+        id: 5,
+        title: "Java",
+        desc: "The built-in security features and long track record of reliability for critical applications make Java the go-to choice for large-data-intensive apps.",
+      },
+      {
+        id: 6,
+        title: "Vue. js",
+        desc: "Build high-performance web apps with beautiful user interfaces and don't worry about scale or reliability.",
+      },
+      {
+        id: 7,
+        title: "React. js",
+        desc: "Leverage a versatile and state-of-the-art frontend tool with a vast community of proficient developers.",
+      },
+      {
+        id: 8,
+        title: "Angular",
+        desc: "Build top-notch, complex and secure applications with technology trusted by the world's leading enterprises.",
+      },
+      {
+        id: 9,
+        title: "HubSpot development",
+        desc: "Empower your organization with dedicated HubSpot developers who understand the web's intricate dynamics.",
+      },
+    ],
+  },
+  {
+    id: 3,
+    hash: "mobileDev",
+    title: "Mobile development",
+    desc: "Supercharge app delivery with our team of mission-driven mobile engineers. Enjoy optimized custom mobile solutions with next-gen UX for both iOS and Android.",
+    points: [
+      {
+        id: 1,
+        title: "iOS",
+        desc: "Develop top-quality iOS apps with cutting edge technology.",
+      },
+      {
+        id: 2,
+        title: "Android",
+        desc: "Building beautiful and scalable mobile applications with top performance using the Java and Kotlin programming languages.",
+      },
+      {
+        id: 3,
+        title: "Python",
+        desc: "Python is currently one of the fastest growing languages to get your job done on time.",
+      },
+      {
+        id: 4,
+        title: "Flutter",
+        desc: "Take your idea to the next stage and accelerate your product's go-to-market with Flutter development.",
+      },
+      {
+        id: 5,
+        title: "React Native",
+        desc: "Reduce the development time and create applications for multiple platforms all at once.",
+      },
+    ],
+  },
+  {
+    id: 4,
+    hash: "support",
+    title: "Support and management",
+    desc: "The project may be completed, but the product is never finished. We’re here to safeguard product quality and support incremental improvements.",
+    points: [
+      {
+        id: 1,
+        title: "Quality assurance",
+        desc: "Quality assurance specialists are the quiet guardians of your project, making sure the product is released bug-free and that it provides users with a flawless experience.",
+      },
+      {
+        id: 2,
+        title: "Cloud technology",
+        desc: "We have rock-solid DevOps/SLA practices to help you leverage cloud technology speeding up development and increasing app security and scalability.",
+      },
+      {
+        id: 3,
+        title: "Product management",
+        desc: "Go beyond building things right and build the right things. Our Product Managers help validate product ideas with the market and boost chances of successful product launch.",
+      },
+      {
+        id: 4,
+        title: "Growth strategy",
+        desc: "Discover new opportunities, markets, and customers, while ensuring a sustainable competitive advantage through smart growth strategies.",
+      },
+      {
+        id: 5,
+        title: "Cybersecurity",
+        desc: "We offer a full range of comprehensive cybersecurity services, including security audits, pentests, DevSecOps, consulting, and trainings.",
+      },
+    ],
   },
 ];
