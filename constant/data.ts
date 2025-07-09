@@ -627,3 +627,60 @@ export const servicesList = [
     ],
   },
 ];
+export const coreValues = [
+  {
+    id: 1,
+    title: "Exceed Expectations",
+    desc: "We don’t stop at “good enough.” We push boundaries to deliver real value that makes a difference.",
+  },
+  {
+    id: 2,
+    title: "Own Your Work, Challenge the Norm",
+    desc: "We believe in taking initiative and speaking up—even if it means questioning the status quo. Every voice matters.",
+  },
+  {
+    id: 3,
+    title: "Be Bold, Stay Curious",
+    desc: "We explore, test, and learn. Innovation comes from taking risks and being open to failure.",
+  },
+  {
+    id: 4,
+    title: "Lead with Integrity",
+    desc: "We act with respect, honesty, and accountability—because every action reflects on all of us.",
+  },
+  {
+    id: 5,
+    title: "Build a Culture of Inclusion & Trust",
+    desc: "A strong team is built intentionally. We foster transparency, empathy, and a space where everyone feels they belong.",
+  },
+  {
+    id: 6,
+    title: "Grow Together",
+    desc: "We’re committed to continuous growth—individually and collectively. We support one another in becoming our best.",
+  },
+  {
+    id: 7,
+    title: "Celebrate Excellence",
+    desc: "We value passion, dedication, and impact. Recognizing great work inspires more of it.",
+  },
+];
+export const people = [
+  {
+    id: 1,
+    name: "Hunzila Sameer",
+    avatar: "hunzila.png",
+    role: "CEO",
+  },
+  {
+    id: 2,
+    name: "Huzaifa Sameer",
+    avatar: "huzaifa.png",
+    role: "CTO",
+  },
+  {
+    id: 3,
+    name: "Sibte Muhammad",
+    avatar: "sibte.png",
+    role: "Web Developer",
+  },
+];

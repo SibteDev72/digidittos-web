@@ -11,6 +11,6 @@
 const route = useRoute();
 const showHeroSection = computed(() => {
   const path = route.path;
-  return path !== "/services";
+  return path !== "/services" && path !== "/about";
 });
 </script>

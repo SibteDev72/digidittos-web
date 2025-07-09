@@ -55,7 +55,7 @@ onMounted(() => {
     start: "top top",
     end: "top+=30% start",
     pin: true,
-    // markers: true,
+    markers: false,
   });
 });
 </script>

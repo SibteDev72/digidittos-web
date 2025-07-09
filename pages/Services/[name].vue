@@ -1,8 +1,8 @@
 <template>
   <div v-if="isServiceValid" class="w-full h-fit flex flex-col">
-    <div id="container1LG" class="w-full h-fit md:h-[100vh] flex flex-col">
+    <div id="container1LG" class="w-full h-fit md:min-h-[100vh] flex flex-col">
       <div
-        class="bg-primary1 w-full flex flex-col gap-8 justify-center h-[100vh] md:h-[30%] px-8 lg:px-14 xl:px-[10rem] text-center"
+        class="bg-primary1 w-full flex flex-col gap-8 justify-center h-[100vh] md:h-[30vh] py-4 px-8 lg:px-14 xl:px-[10rem] text-center"
       >
         <p class="text-3xl font-bold text-white">
           {{ currentService.introduction.heading }}
@@ -13,7 +13,7 @@
       </div>
       <div
         id="container1SM"
-        class="bg-body px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center w-full min-h-[70vh] py-[4rem] md:py-0 md:h-[70%]"
+        class="bg-body px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center w-full min-h-[70vh] py-[4rem] md:py-4"
       >
         <p class="text-dark text-3xl font-bold text-center">
           {{ currentService.introduction.keyPoints.heading }}
@@ -25,8 +25,8 @@
           <div
             v-for="item in currentService.introduction.keyPoints.points"
             :key="item.id"
-            :style="`margin-top: calc(8px * ${item.id})`"
-            class="service-card bg-white rounded-md shadow-md w-full px-6 flex flex-col justify-center gap-2 py-4 min-h-[18rem] md:min-h-[14rem]"
+            :style="`margin-top: calc(6px * ${item.id})`"
+            class="service-card bg-white rounded-md shadow-md w-full px-6 flex flex-col gap-2 py-4 h-[20rem] sm:h-[22rem] md:h-[14rem]"
           >
             <p class="text-lg font-bold text-dark capitalize">
               {{ item.content }}
@@ -36,9 +36,9 @@
         </div>
       </div>
     </div>
-    <div id="container2LG" class="w-full h-fit md:h-[100vh] flex flex-col">
+    <div id="container2LG" class="w-full h-fit md:min-h-[100vh] flex flex-col">
       <div
-        class="w-full flex flex-col md:flex-row md:items-center bg-white gap-8 justify-center h-[100vh] md:h-[30%] px-8 lg:px-14 xl:px-[10rem] text-center md:text-start"
+        class="w-full flex flex-col md:flex-row md:items-center bg-white gap-8 justify-center h-[100vh] md:h-[30vh] py-4 px-8 lg:px-14 xl:px-[10rem] text-center md:text-start"
       >
         <p class="text-3xl font-bold text-dark">
           {{ currentService.technologies.heading }}
@@ -49,7 +49,7 @@
       </div>
       <div
         id="container2SM"
-        class="bg-body w-full min-h-[70vh] flex flex-col justify-center px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
+        class="bg-body px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center w-full min-h-[70vh] py-[4rem] md:py-4"
       >
         <div
           class="grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4"
@@ -57,8 +57,8 @@
           <div
             v-for="item in currentService.technologies.points"
             :key="item.id"
-            :style="`margin-top: calc(8px * ${item.id})`"
-            class="service-card bg-white rounded-md shadow-md w-full px-4 flex flex-col gap-2 justify-center py-4 min-h-[18rem] md:min-h-[14rem]"
+            :style="`margin-top: calc(6px * ${item.id})`"
+            class="service-card bg-white rounded-md shadow-md w-full px-4 flex flex-col gap-2 justify-start py-4 h-[24rem] sm:h-[22rem] md:h-[16rem]"
           >
             <p class="text-lg font-bold text-dark capitalize">
               {{ item.content }}
@@ -68,9 +68,9 @@
         </div>
       </div>
     </div>
-    <div id="container3LG" class="w-full h-fit md:h-[100vh] flex flex-col">
+    <div id="container3LG" class="w-full h-fit md:min-h-[100vh] flex flex-col">
       <div
-        class="w-full flex flex-col bg-primary1 gap-8 justify-center h-[100vh] md:h-[30%] px-8 lg:px-14 xl:px-[10rem] text-center"
+        class="w-full flex flex-col bg-primary1 gap-8 justify-center h-[100vh] md:h-[40vh] py-4 px-8 lg:px-14 xl:px-[10rem] text-center"
       >
         <p class="text-3xl font-bold text-white">
           {{ currentService.advantages.heading }}
@@ -81,7 +81,7 @@
       </div>
       <div
         id="container3SM"
-        class="bg-body w-full min-h-[70vh] flex flex-col justify-center px-8 lg:px-14 xl:px-[10rem] py-[2rem] md:py-0 md:h-[70%]"
+        class="bg-body px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center w-full min-h-[70vh] py-[4rem] md:py-4"
       >
         <div
           class="grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4"
@@ -89,8 +89,8 @@
           <div
             v-for="item in currentService.advantages.points"
             :key="item.id"
-            :style="`margin-top: calc(8px * ${item.id})`"
-            class="service-card bg-white rounded-md shadow-md w-full px-4 flex flex-col gap-2 justify-center py-4 min-h-[18rem] md:min-h-[14rem]"
+            :style="`margin-top: calc(6px * ${item.id})`"
+            class="service-card bg-white rounded-md shadow-md w-full px-6 flex flex-col gap-2 py-4 h-[25rem] sm:h-[22rem] md:h-[16rem]"
           >
             <p class="text-3xl md:text-4xl text-dark font-bold">
               0{{ item.id }}.

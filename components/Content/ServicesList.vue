@@ -18,8 +18,8 @@
       <div
         v-for="item in props.data.points"
         :key="item.id"
-        :style="`margin-top: calc(8px * ${item.id})`"
-        class="service-card bg-white rounded-md shadow-md w-full px-4 flex flex-col gap-2 justify-center py-4 h-[18rem] md:h-[14rem]"
+        :style="`margin-top: calc(6px * ${item.id})`"
+        class="service-card bg-white rounded-md shadow-md w-full px-4 flex flex-col gap-2 justify-center py-4 h-[25rem] sm:h-[22rem] md:h-[16rem]"
       >
         <p class="text-lg font-bold text-dark capitalize">{{ item.title }}</p>
         <p class="text-sm text-dark">{{ item.desc }}</p>
@@ -29,8 +29,8 @@
 </template>
 
 <script setup lang="ts">
-const { $gsap } = useNuxtApp();
 import type { List } from "~/types/Services";
+const { $gsap } = useNuxtApp();
 
 const props = defineProps<{
   data: List;

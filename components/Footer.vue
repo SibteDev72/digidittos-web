@@ -34,7 +34,7 @@
         <img src="/public/icons/twitter.png" class="w-auto h-[2.5rem]" />
       </div>
     </div>
-    <div class="flex flex-col items-center py-4 bg-[#001F35]">
+    <div class="flex flex-col items-center py-4 bg-secondary">
       <p class="text-xs md:text-sm font-normal text-white">
         ©2025 Digidittos. All rights reserved.
       </p>

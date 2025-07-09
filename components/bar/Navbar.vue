@@ -123,7 +123,7 @@ const route = useRoute();
 
 const transparency = computed(() => {
   const path = route.path;
-  return path === "/services";
+  return path === "/services" || path === "/about";
 });
 
 function handleButton(name: string) {
