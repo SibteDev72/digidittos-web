@@ -14,13 +14,13 @@
       </p>
     </div>
     <div
-      class="grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4"
     >
       <div
         v-for="item in coreValues"
         :key="item.id"
         :style="`margin-top: calc(6px * ${item.id})`"
-        class="service-card bg-white rounded-md shadow-md w-full px-4 flex flex-col gap-2 py-4 h-[25rem] sm:h-[22rem] md:h-[16rem]"
+        class="service-card bg-white rounded-md shadow-md w-full px-4 flex flex-col gap-2 py-4 min-h-[15rem] md:h-[16rem]"
       >
         <p class="text-3xl md:text-4xl text-dark font-bold">0{{ item.id }}.</p>
         <p class="text-lg font-bold text-dark capitalize">

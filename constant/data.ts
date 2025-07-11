@@ -684,3 +684,25 @@ export const people = [
     role: "Web Developer",
   },
 ];
+export const opportunities = [
+  {
+    id: 1,
+    title: "Earn up to 10% commission",
+    desc: "Get rewarded for every lead that turns into a customer.",
+  },
+  {
+    id: 2,
+    title: "Gain extra bonuses",
+    desc: "Enjoy one-time success fees for each qualified lead.",
+  },
+  {
+    id: 3,
+    title: "Increase your business's value",
+    desc: "Offer your clients more — broaden your service portfolio with us.",
+  },
+  {
+    id: 4,
+    title: "Expand your network",
+    desc: "Open doors to new opportunities and meaningful connections.",
+  },
+];

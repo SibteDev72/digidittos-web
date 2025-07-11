@@ -67,7 +67,7 @@
       @mouseleave="subMenuStatus = false"
       v-if="subMenuStatus"
       id="submenu"
-      class="absolute p-8 left-0 top-[4rem] w-full h-52 z-50 bg-dark"
+      class="absolute p-8 left-0 top-[4rem] w-full h-52 z-50 bg-secondary"
     >
       <div class="flex flex-row gap-8">
         <NuxtLink
@@ -123,7 +123,7 @@ const route = useRoute();
 
 const transparency = computed(() => {
   const path = route.path;
-  return path === "/services" || path === "/about";
+  return path === "/services" || path === "/about" || path === "/contact";
 });
 
 function handleButton(name: string) {

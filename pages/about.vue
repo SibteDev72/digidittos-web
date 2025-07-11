@@ -16,6 +16,7 @@
     <div class="w-full h-max flex flex-col z-10">
       <ContentAbout />
       <ContentCoreValues />
+      <ContentAccountability />
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div
     id="container"
-    class="w-full h-[120vh] md:h-[110vh] lg:h-[114vh] xl:h-[120vh] flex flex-col gap-24 items-center py-20 md:py-24"
+    class="w-full min-h-[100vh] md:h-[110vh] lg:h-[114vh] xl:h-[120vh] flex flex-col gap-24 items-center py-20 md:py-24"
   >
     <div
       class="w-full xl:w-[40%] px-8 lg:px-14 xl:px-2 items-center flex flex-col gap-4"
@@ -18,13 +18,13 @@
       </p>
     </div>
     <div
-      class="w-full px-8 lg:px-14 xl:px-[10rem] flex flex-row gap-6 self-start"
+      class="w-full overflow-x-scroll md:overflow-x-hidden px-8 lg:px-14 xl:px-[10rem] flex flex-row gap-6 self-start"
     >
       <div
         id="service"
         v-for="item in serviceList"
         :key="item.id"
-        class="border-[1.5px] min-w-[250px] md:min-w-[340px] lg:min-w-[380px] xl:min-w-[460px] min-h-[15rem] border-primary2 flex flex-col gap-3 py-2 px-4 justify-center items-center rounded-md"
+        class="border-[1.5px] min-w-[250px] md:min-w-[340px] lg:min-w-[380px] xl:min-w-[460px] min-h-[16rem] border-primary2 flex flex-col gap-3 py-8 px-4 items-center rounded-md"
       >
         <img class="w-8 h-auto" :src="`/icons/${item.icon}`" />
         <p
@@ -45,18 +45,18 @@ const { $gsap } = useNuxtApp();
 import { serviceList } from "~/constant/data";
 
 onMounted(() => {
-  $gsap.to("#service", {
-    x: -1100,
-    scrollTrigger: {
-      trigger: "#container",
-      pin: true,
-      scrub: 2,
-      start: "top top",
-      end: "bottom bottom",
-      // markers: true,
-    },
-  });
+  if (window.innerWidth >= 768) {
+    $gsap.to("#service", {
+      x: -1100,
+      scrollTrigger: {
+        trigger: "#container",
+        pin: true,
+        scrub: 2,
+        start: "top top",
+        end: "bottom bottom",
+        markers: false,
+      },
+    });
+  }
 });
 </script>
-
-<style scoped></style>
