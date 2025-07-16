@@ -1,6 +1,17 @@
 export const menu = [
   {
     id: 1,
+    title: "home",
+    link: "/",
+    subMenu: [],
+    hashValues: [
+      { id: 1, name: "details", hash: "#details" },
+      { id: 2, name: "services", hash: "#services" },
+      { id: 3, name: "reviews", hash: "#reviews" },
+    ],
+  },
+  {
+    id: 2,
     title: "services",
     link: "/services",
     subMenu: [
@@ -8,18 +19,35 @@ export const menu = [
       { id: 2, name: "mobile app development" },
       { id: 3, name: "UI UX Design" },
     ],
-  },
-  {
-    id: 2,
-    title: "about us",
-    link: "/about",
-    subMenu: [],
+    hashValues: [
+      { id: 1, name: "ideation", hash: "#ideation" },
+      { id: 2, name: "product design", hash: "#productDesign" },
+      { id: 3, name: "web services", hash: "#webDev" },
+      { id: 4, name: "moble app services", hash: "#mobileDev" },
+      { id: 5, name: "support", hash: "#support" },
+    ],
   },
   {
     id: 3,
+    title: "about us",
+    link: "/about",
+    subMenu: [],
+    hashValues: [
+      { id: 1, name: "about", hash: "#about" },
+      { id: 2, name: "core values", hash: "#coreValues" },
+      { id: 3, name: "accountability", hash: "#accountability" },
+    ],
+  },
+  {
+    id: 4,
     title: "contact us",
     link: "/contact",
     subMenu: [],
+    hashValues: [
+      { id: 1, name: "estimate your project", hash: "#estimateYourProject" },
+      { id: 2, name: "why choose us?", hash: "#whyUS" },
+      { id: 3, name: "our polish office", hash: "#ourPolishOffice" },
+    ],
   },
 ];
 export const serviceNav = [
@@ -140,14 +168,6 @@ export const serviceList = [
 export const feedback = [
   {
     id: 1,
-    avatar: "jenny.jpg",
-    name: "Jenny Wilson",
-    role: "Vice President",
-    review:
-      "We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the product concept so quickly. It acted as a catalyst to take our design to the next level and get more eyes on our product.",
-  },
-  {
-    id: 2,
     avatar: "hunzila.png",
     name: "Hunzila Sameer",
     role: "CEO",
@@ -155,7 +175,7 @@ export const feedback = [
       "We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the product concept so quickly.",
   },
   {
-    id: 3,
+    id: 2,
     avatar: "huzaifa.png",
     name: "Huzaifa Sameer",
     role: "CTO",
@@ -163,7 +183,7 @@ export const feedback = [
       "Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the product concept so quickly. It acted as a catalyst to take our design to the next level and get more eyes on our product.",
   },
   {
-    id: 4,
+    id: 3,
     avatar: "sibte.png",
     name: "Sibte Muhammad",
     role: "Web Developer",
@@ -705,4 +725,9 @@ export const opportunities = [
     title: "Expand your network",
     desc: "Open doors to new opportunities and meaningful connections.",
   },
+];
+export const socialHandle = [
+  { id: 1, name: "linkedin", icon: "linkedin.png", link: "#" },
+  { id: 1, name: "github", icon: "github.png", link: "#" },
+  { id: 1, name: "twitter", icon: "twitter.png", link: "#" },
 ];

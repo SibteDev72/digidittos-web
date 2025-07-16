@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-fit md:h-[100vh] flex flex-col">
+  <div id="details" class="w-full h-fit md:h-[100vh] flex flex-col">
     <div
       class="w-full h-[100vh] md:h-[50%] py-12 px-12 bg-primary1 flex flex-col gap-6 md:gap-10 justify-center items-center"
     >

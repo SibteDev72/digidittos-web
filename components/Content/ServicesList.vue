@@ -1,7 +1,7 @@
 <template>
   <div :id="props.data.hash" ref="containerRef" class="w-full h-fit bg-body">
     <div
-      class="w-full h-max py-[2rem] bg-dark flex flex-col md:flex-row px-8 lg:px-14 xl:px-[10rem] gap-4 justify-center items-center"
+      class="w-full h-max py-[2rem] bg-primary2 flex flex-col md:flex-row px-8 lg:px-14 xl:px-[10rem] gap-4 justify-center items-center"
     >
       <p
         class="w-full md:w-[50%] text-white text-xl lg:text-2xl capitalize font-bold"

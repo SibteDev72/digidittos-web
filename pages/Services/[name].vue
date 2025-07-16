@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isServiceValid" class="w-full h-fit flex flex-col">
+  <div v-if="isServiceValid" class="w-full h-fit flex flex-col mt-[4rem]">
     <div id="container1LG" class="w-full h-fit md:min-h-[100vh] flex flex-col">
       <div
         class="bg-primary1 w-full flex flex-col gap-8 justify-center h-[100vh] md:h-[30vh] py-4 px-8 lg:px-14 xl:px-[10rem] text-center"

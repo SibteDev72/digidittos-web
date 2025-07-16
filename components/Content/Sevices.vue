@@ -1,6 +1,7 @@
 <template>
   <div
-    id="container"
+    id="services"
+    ref="containerRef"
     class="w-full min-h-[100vh] md:h-[110vh] lg:h-[114vh] xl:h-[120vh] flex flex-col gap-24 items-center py-20 md:py-24"
   >
     <div
@@ -41,15 +42,17 @@
 </template>
 
 <script setup lang="ts">
-const { $gsap } = useNuxtApp();
 import { serviceList } from "~/constant/data";
+
+const { $gsap } = useNuxtApp();
+const containerRef = ref<HTMLElement | null>(null);
 
 onMounted(() => {
   if (window.innerWidth >= 768) {
     $gsap.to("#service", {
       x: -1100,
       scrollTrigger: {
-        trigger: "#container",
+        trigger: containerRef.value,
         pin: true,
         scrub: 2,
         start: "top top",

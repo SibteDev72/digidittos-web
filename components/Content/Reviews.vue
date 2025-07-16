@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full h-[100vh] flex flex-col md:flex-row">
+  <div id="reviews" class="w-full h-max flex flex-col md:flex-row">
     <div
-      class="w-full md:w-[50%] h-[20%] md:h-full bg-[#2EC5CE] px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-2 md:gap-4 justify-center items-center"
+      class="w-full md:w-[50%] min-h-[20vh] md:h-[100vh] py-16 bg-[#2EC5CE] px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-2 md:gap-4 justify-center items-center"
     >
       <div class="w-fit">
         <p class="text-dark text-2xl md:text-5xl font-bold">Happy Customers</p>
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div
-      class="w-full md:w-[50%] h-[80%] md:h-full relative flex flex-col gap-8 px-8 lg:px-14 xl:px-20 justify-between py-[7rem] lg:py-[15rem]"
+      class="w-full md:w-[50%] min-h-[80vh] md:min-h-[100vh] relative flex flex-col gap-8 px-8 lg:px-14 xl:px-20 justify-between py-[6rem] lg:py-[12rem]"
     >
       <img
         class="absolute top-12 right-12 w-[4rem] lg:w-[6rem] h-auto"

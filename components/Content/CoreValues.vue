@@ -1,5 +1,6 @@
 <template>
   <div
+    id="coreValues"
     ref="containerRef"
     class="w-full h-max bg-body flex flex-col gap-[5rem] py-12 px-8 lg:px-14 xl:px-[10rem]"
   >

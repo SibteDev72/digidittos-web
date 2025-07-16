@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full h-full flex flex-col">
+  <div id="accountability" class="w-full h-full flex flex-col">
     <div
-      class="w-full h-max bg-secondary flex flex-col md:flex-row md:items-center gap-8 lg:gap-[8rem] py-12 px-8 lg:px-14 xl:px-[10rem]"
+      class="w-full h-max bg-dark flex flex-col md:flex-row md:items-center gap-8 lg:gap-[8rem] py-12 px-8 lg:px-14 xl:px-[10rem]"
     >
       <img
         src="/public/images/accountability.png"
@@ -22,8 +22,7 @@
       </div>
     </div>
     <div
-      class="w-full bg-center min-h-[30vh] py-12 px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center items-center"
-      style="background-image: url('/images/Cover_Services.png')"
+      class="w-full bg-primary2 min-h-[30vh] py-12 px-8 lg:px-14 xl:px-[10rem] flex flex-col gap-4 justify-center items-center"
     >
       <p class="text-white text-xl md:text-3xl font-bold">
         Own the Change with Digidittos

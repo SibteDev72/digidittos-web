@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[calc(100vh-4rem)] flex flex-row">
+  <div class="w-full h-[calc(100vh-4rem)] mt-[4rem] flex flex-row">
     <div
       class="w-full md:w-[50%] h-full bg-dark md:bg-white flex flex-col gap-8 md:gap-6 py-8 md:py-0 px-8 lg:px-14 xl:px-[10rem] justify-between md:justify-center"
     >
@@ -21,7 +21,11 @@
         >
           {{ currentSlide.desc }}
         </p>
-        <Button variant="filled" name="lets work together" />
+        <Button
+          @clicked-button="handleButton"
+          variant="filled"
+          name="lets work together"
+        />
       </div>
     </div>
     <div
@@ -41,6 +45,11 @@ import { slides } from "~/constant/data";
 const { $gsap } = useNuxtApp();
 const slideCount = ref(0);
 const currentSlide = ref(slides[slideCount.value]);
+const router = useRouter();
+
+function handleButton(name: string) {
+  router.push("/contact");
+}
 
 onMounted(() => {
   $gsap.fromTo(

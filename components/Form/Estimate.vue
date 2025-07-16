@@ -54,7 +54,7 @@
       placeholder="Enter your answer..."
     />
     <Button
-      class="w-[20rem] text-xl"
+      class="w-[20rem] text-xl rounded-full"
       variant="filled"
       @clicked-button="formHandler"
       name="Estimate your project"

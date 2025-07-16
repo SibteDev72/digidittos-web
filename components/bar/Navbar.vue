@@ -1,88 +1,87 @@
 <template>
-  <div class="z-[2000] flex flex-col">
-    <div class="w-full h-[4rem] flex flex-row">
-      <div
-        :class="`w-[50%] px-3 md:px-0 h-full ${
-          subMenuStatus
-            ? 'bg-[#18191F] text-white'
-            : transparency
-            ? 'bg-transparent text-white'
-            : 'bg-[#18191F] lg:bg-white text-white lg:text-dark'
-        } flex flex-row gap-5 items-center justify-center duration-200`"
-      >
-        <NuxtLink to="/">
-          <div class="flex flex-row gap-3 items-end">
-            <img class="w-auto h-7" src="/images/logo.png" />
-            <img class="w-auto h-5 mr-5" src="/images/Asset 2@4x 1.png" />
-          </div>
-        </NuxtLink>
+  <div
+    :class="`z-[2000] fixed top-0 bg-white left-0 shadow-md w-full h-[4rem] px-8 lg:px-14 xl:px-[10rem] flex flex-row gap-5 items-center justify-between duration-200 `"
+  >
+    <div class="flex flex-row gap-[4rem]">
+      <NuxtLink to="/">
+        <div class="flex flex-row gap-3 items-end">
+          <img class="w-auto h-7" src="/images/logo.png" />
+          <img class="w-auto h-5 mr-5" src="/images/Asset 2@4x 1.png" />
+        </div>
+      </NuxtLink>
+      <div class="hidden lg:flex flex-row gap-6">
         <NuxtLink
           :to="item.link"
           @mouseenter="onEnter(item.title)"
-          class="hidden lg:flex capitalize cursor-pointer font-semibold hover:border-b-2 hover:border-primary2"
+          class="capitalize cursor-pointer font-semibold hover:border-b-2 hover:border-primary2 hover:text-primary1"
           id="links"
           v-for="item in menu"
           :key="item.id"
           >{{ item.title }}</NuxtLink
         >
       </div>
-      <div
-        :class="`w-[50%] h-full flex flex-col justify-center items-end px-3 md:px-0 md:items-center ${
-          transparency ? 'bg-transparent' : 'bg-[#18191F]'
-        }`"
-      >
-        <div
-          @click="handleMobileMenu"
-          class="flex lg:hidden flex-col items-end gap-1 cursor-pointer z-[2000]"
-        >
-          <div
-            :class="[
-              'h-[2px] bg-white transition-all duration-300',
-              mobileMenuStatus === true ? 'w-8' : 'w-8',
-            ]"
-          />
-          <div
-            :class="[
-              'h-[2px] bg-white transition-all duration-300',
-              mobileMenuStatus === true ? 'w-8' : 'w-6',
-            ]"
-          />
-          <div
-            :class="[
-              'h-[2px] bg-white transition-all duration-300',
-              mobileMenuStatus === true ? 'w-8' : 'w-4',
-            ]"
-          />
-        </div>
-
-        <Button
-          class="hidden lg:flex"
-          variant="outlined"
-          name="get quote"
-          @clicked-button="handleButton"
-        />
-      </div>
     </div>
     <div
-      @mouseleave="subMenuStatus = false"
-      v-if="subMenuStatus"
-      id="submenu"
-      class="absolute p-8 left-0 top-[4rem] w-full h-52 z-50 bg-secondary"
+      @click="handleMobileMenu"
+      class="flex lg:hidden flex-col items-end gap-1 cursor-pointer z-[2000]"
     >
-      <div class="flex flex-row gap-8">
-        <NuxtLink
-          class="cursor-pointer capitalize text-white text-lg font-semibold hover:border-b-2 hover:border-primary1"
-          v-for="item in currentSubMenu"
-          :to="`/services/${item.name}`"
-          :key="item.id"
-          >{{ item.name }}</NuxtLink
-        >
-      </div>
+      <div
+        :class="[
+          'h-[2px] bg-dark transition-all duration-300',
+          mobileMenuStatus === true ? 'w-8' : 'w-8',
+        ]"
+      />
+      <div
+        :class="[
+          'h-[2px] bg-dark transition-all duration-300',
+          mobileMenuStatus === true ? 'w-8' : 'w-6',
+        ]"
+      />
+      <div
+        :class="[
+          'h-[2px] bg-dark transition-all duration-300',
+          mobileMenuStatus === true ? 'w-8' : 'w-4',
+        ]"
+      />
+    </div>
+
+    <Button
+      class="hidden lg:flex"
+      variant="outlined"
+      name="get quote"
+      @clicked-button="handleButton"
+    />
+  </div>
+  <div
+    @mouseleave="subMenuStatus = false"
+    v-if="subMenuStatus"
+    id="submenu"
+    class="fixed px-8 lg:px-14 xl:px-[10rem] left-0 top-[4rem] w-full h-max py-10 z-50 bg-dark flex flex-col gap-4"
+  >
+    <div class="flex flex-row gap-8">
+      <NuxtLink
+        class="cursor-pointer capitalize text-white text-lg font-semibold hover:border-b-2 hover:border-primary1"
+        v-for="item in currentSubMenu"
+        :to="`/services/${item.name}`"
+        :key="item.id"
+        >{{ item.name }}</NuxtLink
+      >
+    </div>
+    <div class="flex flex-row gap-8">
+      <a
+        v-for="item in currentMenuHash"
+        :key="item.id"
+        class="cursor-pointer capitalize text-white text-lg font-semibold hover:border-b-2 hover:border-primary1"
+        @click.prevent="handleHashClick(currentLink, item.hash)"
+      >
+        {{ item.name }}
+      </a>
     </div>
   </div>
+
   <!-- Mobile Navbar -->
   <div
-    :class="`lg:hidden fixed top-0 right-0 bg-dark h-screen w-[60vw] z-[1000] flex flex-col justify-start pl-4 pt-[10rem] gap-6 transition-transform duration-300 ease-in-out ${
+    :class="`lg:hidden fixed top-0 right-0 bg-primary1 h-screen w-[60vw] z-[1000] flex flex-col justify-start pl-4 pt-[10rem] gap-4 transition-transform duration-300 ease-in-out ${
       mobileMenuStatus ? 'translate-x-0' : 'translate-x-full'
     }`"
   >
@@ -119,15 +118,38 @@ const subMenuStatus = ref<boolean>(false);
 const mobileMenuStatus = ref<boolean>(false);
 const currentMenuTitle = ref<string>("");
 const currentSubMenu = ref<any>([]);
+const currentMenuHash = ref<any>([]);
+const currentLink = ref<any>("");
+const router = useRouter();
 const route = useRoute();
 
-const transparency = computed(() => {
-  const path = route.path;
-  return path === "/services" || path === "/about" || path === "/contact";
-});
+function handleHashClick(path: string, hash: string) {
+  if (route.path === path) {
+    nextTick(() => scrollToHash(hash));
+  } else {
+    router.push({ path }).then(() => {
+      const unwatch = watch(
+        () => route.fullPath,
+        () => {
+          nextTick(() => {
+            scrollToHash(hash);
+            unwatch();
+          });
+        }
+      );
+    });
+  }
+}
+
+function scrollToHash(hash: string) {
+  const el = document.querySelector(hash);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
 
 function handleButton(name: string) {
-  alert(name);
+  router.push("/contact");
 }
 
 function handleMobileMenu() {
@@ -152,7 +174,9 @@ function onEnter(title: string) {
   currentMenuTitle.value = title;
   subMenuStatus.value = true;
   const menuItem: any = menu.find((item) => item.title === title);
+  currentLink.value = menuItem?.link || [];
   currentSubMenu.value = menuItem?.subMenu || [];
+  currentMenuHash.value = menuItem?.hashValues || [];
   $gsap.fromTo(
     "#submenu",
     { opacity: 0, y: -20 },

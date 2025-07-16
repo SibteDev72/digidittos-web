@@ -1,23 +1,21 @@
 <template>
-  <div class="w-full h-fit bg-dark flex flex-col justify-between">
+  <div class="w-full h-fit flex flex-col justify-between">
     <div
-      class="px-8 lg:px-14 xl:px-[10rem] py-12 flex flex-col md:flex-row gap-8 md:justify-between"
+      class="px-8 bg-primary2 lg:px-14 xl:px-[10rem] py-12 flex flex-col md:flex-row gap-8 md:justify-between"
     >
       <div class="w-full md:w-[20rem] flex flex-col gap-4">
         <div class="flex flex-row gap-3 items-end">
-          <img class="w-auto h-7" src="/images/logo.png" />
-          <img class="w-auto h-5 mr-5" src="/images/Asset 2@4x 1.png" />
+          <img class="w-auto h-10 ml-4" src="/images/logo-white.png" />
+          <!-- <img class="w-auto h-5 mr-5" src="/images/Asset 2@4x 1.png" /> -->
         </div>
         <p class="text-sm lg:text-[16px] font-medium text-white">
-          Digidittos is a tech company delivering cutting-edge web and mobile
-          solutions with a focus on seamless UX/UI design. We help businesses
-          validate ideas, design impactful products, and create scalable digital
-          experiences. With our research-driven approach and agile services, we
-          turn concepts into user-loved products.
+          Digidittos delivers cutting-edge web and mobile solutions with a focus
+          on UX/UI. We help businesses validate ideas, design impactful
+          products, and build scalable digital experiences.
         </p>
       </div>
       <div class="flex flex-col gap-3">
-        <p class="text-lg lg:text-2xl font-semibold text-white">Menu</p>
+        <p class="text-lg lg:text-xl font-bold text-white">Company</p>
         <div class="grid grid-cols-2 gap-3 w-max">
           <NuxtLink
             :to="item.link"
@@ -28,13 +26,20 @@
           >
         </div>
       </div>
-      <div class="flex flex-row gap-4">
-        <img src="/public/icons/linkedin.png" class="w-auto h-[2.5rem]" />
-        <img src="/public/icons/github.png" class="w-auto h-[2.5rem]" />
-        <img src="/public/icons/twitter.png" class="w-auto h-[2.5rem]" />
+      <div class="flex flex-col gap-3">
+        <p class="text-lg lg:text-xl font-bold text-white">Follow Us</p>
+        <div class="flex flex-row gap-4">
+          <NuxtLink
+            v-for="item in socialHandle"
+            :key="item.id"
+            :to="`${item.link}`"
+          >
+            <img :src="`/icons/${item.icon}`" class="w-auto h-[2.5rem]" />
+          </NuxtLink>
+        </div>
       </div>
     </div>
-    <div class="flex flex-col items-center py-4 bg-primary2">
+    <div class="flex flex-col items-center py-4 bg-primary1">
       <p class="text-xs md:text-sm font-normal text-white">
         ©2025 Digidittos. All rights reserved.
       </p>
@@ -43,7 +48,7 @@
 </template>
 
 <script setup lang="ts">
-import { menu } from "~/constant/data";
+import { menu, socialHandle } from "~/constant/data";
 </script>
 
 <style scoped></style>
