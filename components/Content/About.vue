@@ -18,14 +18,14 @@
       <img src="/public/images/digital.png" class="w-full lg:w-[40%] h-auto" />
     </div>
     <div
-      class="bg-primary2 min-h-[50vh] flex flex-col md:flex-row items-center justify-between py-12 px-8 lg:px-14 xl:px-[10rem]"
+      class="bg-primary1 min-h-[50vh] flex flex-col md:flex-row items-center justify-between py-12 px-8 lg:px-14 xl:px-[10rem]"
     >
       <img
         class="w-[80%] md:w-[20%] h-auto"
         src="/public/images/digital-2.png"
       />
       <div
-        class="bg-primary1 w-full lg:w-[75%] h-max flex flex-col gap-6 p-6 justify-center"
+        class="bg-primary2 w-full lg:w-[75%] h-max flex flex-col gap-6 p-6 justify-center"
       >
         <p class="text-white text-lg md:text-xl capitalize font-normal">
           “From day one, our mission has been to empower entrepreneurs in

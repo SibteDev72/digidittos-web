@@ -25,7 +25,7 @@
         id="service"
         v-for="item in serviceList"
         :key="item.id"
-        class="border-[1.5px] min-w-[250px] md:min-w-[340px] lg:min-w-[380px] xl:min-w-[460px] min-h-[16rem] border-primary2 flex flex-col gap-3 py-8 px-4 items-center rounded-md"
+        class="border-[1.5px] min-w-[250px] md:min-w-[340px] lg:min-w-[380px] xl:min-w-[460px] min-h-[16rem] border-primary1 flex flex-col gap-3 py-8 px-4 items-center rounded-md"
       >
         <img class="w-8 h-auto" :src="`/icons/${item.icon}`" />
         <p

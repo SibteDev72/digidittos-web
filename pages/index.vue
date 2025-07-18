@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex flex-col overflow-x-hidden">
     <ContentDetails />
-    <ContentSevices />
+    <ContentServices />
     <ContentReviews />
   </div>
 </template>

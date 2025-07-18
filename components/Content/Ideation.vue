@@ -1,7 +1,8 @@
 <template>
   <div id="ideation" class="w-full min-h-[100vh]">
     <div
-      class="h-[50vh] flex flex-col px-8 lg:px-14 xl:px-[10rem] gap-4 justify-center bg-primary2"
+      style="background-image: url('/images/patterns.png')"
+      class="h-[50vh] flex flex-col px-8 lg:px-14 xl:px-[10rem] gap-4 justify-center bg-cover bg-primary1"
     >
       <p class="lg:w-[60%] text-white text-xl lg:text-2xl font-bold">
         Your One-Stop Digital Partner
