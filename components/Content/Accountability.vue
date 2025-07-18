@@ -1,5 +1,5 @@
 <template>
-  <div id="accountability" class="w-full h-full flex flex-col">
+  <div id="accountability" class="w-full h-max flex flex-col">
     <div
       class="w-full h-max bg-primary1 flex flex-col items-center md:flex-row md:items-center gap-8 lg:gap-[8rem] py-12 px-8 lg:px-14 xl:px-[10rem]"
     >
